@@ -1,91 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:title="🌪️ Registro de Eventos Extremos"
-        android:titleTextColor="@android:color/white"
-        android:elevation="4dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Eventos Extremos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
 
-    <!-- ScrollView para os campos -->
-    <ScrollView
+    <EditText
+        android:id="@+id/edtLocal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true">
+        android:hint="Local (cidade/bairro )"
+        android:inputType="textCapWords"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
+    <EditText
+        android:id="@+id/edtTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo do evento (chuva, seca, etc.)"
+        android:inputType="textCapSentences"/>
 
-            <!-- Campo Cidade/Bairro -->
-            <EditText
-                android:id="@+id/editLocal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cidade/Bairro"
-                android:inputType="text"
-                android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/edtImpacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Grau de impacto (leve, moderado, severo)"
+        android:inputType="textCapSentences"/>
 
-            <!-- Campo Tipo de Evento -->
-            <EditText
-                android:id="@+id/editTipo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Tipo de Evento"
-                android:inputType="text"
-                android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/edtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data do evento (DD/MM/AAAA)"
+        android:inputType="date"/>
 
-            <!-- Campo Grau de Impacto -->
-            <EditText
-                android:id="@+id/editGrau"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Grau de Impacto"
-                android:inputType="text"
-                android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/edtPessoasAfetadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número estimado de pessoas afetadas"
+        android:inputType="number"/>
 
-            <!-- Campo Data do Evento -->
-            <EditText
-                android:id="@+id/editData"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Data do Evento"
-                android:inputType="date"
-                android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/btnIncluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
 
-            <!-- Campo Número de Pessoas Afetadas -->
-            <EditText
-                android:id="@+id/editPessoas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Pessoas Afetadas"
-                android:inputType="number"
-                android:layout_marginTop="8dp" />
-
-            <!-- Botão Incluir -->
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Incluir"
-                android:layout_marginTop="16dp" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- RecyclerView para mostrar a lista de eventos -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rvEventos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnIdentificacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificação"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
 </LinearLayout>

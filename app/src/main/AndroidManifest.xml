@@ -13,17 +13,20 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
 
-    <activity
-        android:name="com.example.alunos_rm552516_rm98928.MainActivity"
-        android:exported="true"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"> <!-- Tema sem ActionBar -->
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        <activity
+            android:name="com.example.alunos_rm552516_rm98928.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"> <!-- Tema sem ActionBar -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-</application>
+        <activity android:name="com.example.alunos_rm552516_rm98928.IdentificacaoActivity"
+            android:exported="false" />
 
-    </manifest>
+    </application>
+
+</manifest>
