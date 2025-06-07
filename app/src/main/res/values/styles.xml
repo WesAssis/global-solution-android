@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Definição das cores principais -->
+    <color name="colorPrimary">#6200EE</color>  <!-- Cor primária (padrão) -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Cor mais escura da cor primária, geralmente usada na barra de status -->
+    <color name="colorAccent">#03DAC5</color> <!-- Cor de destaque (usada para botões, links, etc.) -->
+
+    <!-- Definindo o tema para a aplicação sem ActionBar (usando Toolbar) -->
+    <style name="Theme.AppCompat.Light.NoActionBar" parent="Theme.AppCompat.Light">
+        <!-- Configuração para o tema sem ActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item> <!-- Remove a ActionBar nativa -->
+        <item name="colorPrimary">@color/colorPrimary</item>  <!-- Cor primária -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!-- Cor primária escura -->
+        <item name="colorAccent">@color/colorAccent</item> <!-- Cor de destaque -->
+    </style>
+
+    <!-- Configuração do tema com a Toolbar, substituindo a ActionBar -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Personalizações adicionais para o tema podem ser feitas aqui -->
+        <!-- A Toolbar será configurada no código Kotlin da MainActivity -->
+    </style>
+
+</resources>

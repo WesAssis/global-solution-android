@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="🌪️ Registro de Eventos Extremos"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp" />
+
+    <!-- ScrollView para os campos -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Campo Cidade/Bairro -->
+            <EditText
+                android:id="@+id/editLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cidade/Bairro"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <!-- Campo Tipo de Evento -->
+            <EditText
+                android:id="@+id/editTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Evento"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <!-- Campo Grau de Impacto -->
+            <EditText
+                android:id="@+id/editGrau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Grau de Impacto"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <!-- Campo Data do Evento -->
+            <EditText
+                android:id="@+id/editData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data do Evento"
+                android:inputType="date"
+                android:layout_marginTop="8dp" />
+
+            <!-- Campo Número de Pessoas Afetadas -->
+            <EditText
+                android:id="@+id/editPessoas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pessoas Afetadas"
+                android:inputType="number"
+                android:layout_marginTop="8dp" />
+
+            <!-- Botão Incluir -->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incluir"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- RecyclerView para mostrar a lista de eventos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
